@@ -23,6 +23,7 @@ const Card = (props) => {
 
 const Container = styled.View`
   background-color: #fff;
+  margin-bottom: 20px;
   width: 315px;
   height: 280px;
   border-radius: 14px;
