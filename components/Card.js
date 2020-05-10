@@ -1,19 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/native'
 
 
-const Card = () => {
+const Card = (props) => {
+  const {title, image, logo, caption, subtitle } = props
   return (
     <Container>
       <Cover>
-        <Image source={require('../assets/background2.jpg')} />
-        <Title>Styled Components </Title>
+        <Image source={image} />
+        <Title>{title} </Title>
       </Cover>
       <Content>
-        <Logo source={require('../assets/logo-react.png')} />
+        <Logo source={logo} />
         <Wrapper>
-          <Caption>React Native</Caption>
-          <Subtitle>5 of 12 sections</Subtitle>
+          <Caption>{caption}</Caption>
+          <Subtitle>{subtitle}</Subtitle>
         </Wrapper>
       </Content>
     </Container>
@@ -27,7 +28,8 @@ const Container = styled.View`
   border-radius: 14px;
   margin-left: 20px;
   margin-top: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.65);
+  box-shadow: 20px 5px 15px rgba(0, 0, 0, 0.65);
+  elevation: 10;
 `
 
 const Cover = styled.View`
