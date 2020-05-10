@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Ionicons } from '@expo/vector-icons';
 import Card from "./components/Card";
 import {NotificationIcon} from './components/Icons'
+import Logo from "./components/Logo";
 
 export default function App() {
   return (
@@ -22,6 +23,20 @@ export default function App() {
               }}
             />
           </TitleBar>
+          <ScrollView
+            horizontal showsHorizontalScrollIndicator={false}
+            style={{
+              padding: 20,
+              paddingLeft: 12,
+              paddingTop: 30
+            }}
+          >
+            <Logo text="Framer X" image={require('./assets/logo-framerx.png')} />
+            <Logo text="Figma" image={require('./assets/logo-figma.png')} />
+            <Logo text="Figma" image={require('./assets/logo-figma.png')} />
+            <Logo text="Figma" image={require('./assets/logo-figma.png')} />
+            <Logo text="Figma" image={require('./assets/logo-figma.png')} />
+          </ScrollView>
           <SubTitle>Continue Learning</SubTitle>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             <Card
@@ -85,6 +100,6 @@ const SubTitle = styled.Text`
   color: #b8bece;
   font-weight: 600;
   margin-left: 20px;
-  margin-top: 50px;
+  margin-top: 20px;
   text-transform: uppercase;
 `;
