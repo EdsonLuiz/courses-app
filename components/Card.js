@@ -21,7 +21,9 @@ const Card = (props) => {
   )
 }
 
-const Container = styled.View`
+const Container = styled.View.attrs({
+  elevation: 10
+})`
   background-color: #fff;
   margin-bottom: 20px;
   width: 315px;
@@ -30,7 +32,6 @@ const Container = styled.View`
   margin-left: 20px;
   margin-top: 20px;
   box-shadow: 20px 5px 15px rgba(0, 0, 0, 0.65);
-  elevation: 10;
 `
 
 const Cover = styled.View`
